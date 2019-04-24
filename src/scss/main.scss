@@ -1,3 +1,15 @@
+$colorDark: #212121;
+$colorGreen: #7EB105;
+$colorOrange: #F6731C;
+$colorLightGrey: #999999;
+@mixin fonts($fofa, $category, $fsize, $lheight){
+    font-family: $fofa;
+    line-height: $lheight;
+    font-size: $fsize;
+}
+
+//-----------------------
+
 .container {
     max-width: 1240px;
     margin: 0 auto;
@@ -8,11 +20,15 @@
     border-left: 1px solid #EBEBEB;
     border-right: 1px solid #EBEBEB;
     position: relative;
-    &:hover .iphone_info_hiden{
-        border: 1px solid #7EB105;
+    &:hover {
+        border: 1px solid $colorGreen;
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
         border-radius: 3px;
         transform: translateY(-1px);
+        opacity: 1;
+        transition: .5s;
+    }
+    &:hover .iphone_info_hiden {
         opacity: 1;
         transition: .5s;
     }
@@ -23,6 +39,7 @@
     max-width: 217px;
     &_hiden {
         opacity: 0;
+        transition: .5s;
     }
 }
 
@@ -49,7 +66,7 @@
     margin-left: auto;
     margin-right: auto;
 }
-.sq_main {
+.colorchange_main {
     display: flex;
     position: absolute;
     bottom: 10px;
@@ -61,11 +78,12 @@
         position: absolute;
         bottom: -20px;
         border-radius: 4px;
+        border:2px solid transparent;
         &:hover {
-            border: 2px solid #7EB105;
+            border: 2px solid $colorGreen;
             border-radius: 4px;
             cursor: pointer;
-            transition: .5s;
+            transition: .2s;
         }
     }
     &_1 {
@@ -74,7 +92,7 @@
     }
     &_2 {
         background-color: #FFACA7;
-        left: 32px;
+        left: 42px;
     }
 }
 a {
@@ -85,20 +103,18 @@ a {
     display: flex;
     justify-content: space-around;
     &_stars_item:hover path {
-        fill: #F6731C;
+        fill: $colorOrange;
     }
     &_stars_mark {
-        font-family: serif, Arial;
-        font-size: 12px;
-        line-height: normal;
-        color: #999999;
+        @include fonts(Arial, serif, 12px ,normal );
+        color: $colorLightGrey;
     }
     &_reviews_count_item {
         font-family: Arial, serif;
         font-size: 12px;
         line-height: normal;
         text-decoration: underline;
-        color: #7EB105;
+        color: $colorGreen;
     }
 }
 p {
@@ -111,28 +127,22 @@ p {
     display: flex;
     flex-direction: column;
     &_key_item {
-        font-family: Arial, serif;
-        font-size: 10px;
-        line-height: normal;
-        color: #999999;
+        @include fonts(Arial, serif, 10px ,normal );
+        color: $colorLightGrey;
         display: inline-block;
     }
     &_key_item2 {
-        font-family: Arial, serif;
-        font-size: 11px;
-        line-height: normal;
-        color: #212121;
+        @include fonts(Arial, serif, 11px ,normal );
+        color: $colorDark;
         display: inline-block;
     }
     &_inStock {
         margin-top: 5px;
         position: relative;
     }
-    &_inStock_words {
-        font-family: Arial, serif;
-        font-size: 12px;
-        line-height: normal;
-        color: #7EB105;
+    &_inStock_text {
+        @include fonts(Arial, serif, 12px ,normal );
+        color: $colorGreen;
         margin-left: 15px;
     }
     &_inStock_circle {
@@ -143,48 +153,44 @@ p {
         top: 3px;
         left: 0;
         border-radius: 50%;
-        background-color: #7EB105;
+        background-color: $colorGreen;
     }
     &_info {
         margin-top: 6px;
         width: 217px;
         &_item {
-            font-family: Arial, serif;
-            font-size: 14px;
-            line-height: normal;
-            color: #212121;
+            @include fonts(Arial, serif, 14px ,normal );
+            color: $colorDark;
         }
     }
-    &_gb {
+    &_memory {
         margin-top: 6px;
         &_link1, &_link2 {
-            font-family: Arial;
-            font-size: 14px;
-            line-height: normal;
+            @include fonts(Arial, serif, 14px ,normal );
         }
         &_link1 {
-            color: #212121;
+            color: $colorDark;
+            &:hover {
+                border-bottom-style: solid;
+                color: $colorGreen;
+            }
         }
         &_link2 {
-            color: #7EB105;
+            color: $colorGreen;
             border-bottom-style: dashed;
         }
     }
     &_price {
         margin-top: 12px;
         &_old {
-            font-family: Arial, serif;
-            font-size: 12px;
-            line-height: normal;
-            color: #999999;
+            @include fonts(Arial, serif, 12px ,normal );
+            color: $colorLightGrey;
             text-decoration: line-through;
             display: inline-block;
         }
         &_new {
-            font-family: Arial, serif;
-            font-size: 18px;
-            line-height: normal;
-            color: #F6731C;
+            @include fonts(Arial, serif, 18px ,normal );
+            color: $colorOrange;
             font-weight: bold;
             margin-left: 8px;
             display: inline-block;
@@ -196,16 +202,14 @@ p {
                 top: -1px;
                 right: -22px;
                 font-weight: bold;
-                color: #F6731C;
+                color: $colorOrange;
                 font-size: 12px;
             }
         }
         &_economy {
             margin-top: 3px;
-            font-family: Arial, serif;
-            font-size: 12px;
-            line-height: normal;
-            color: #7EB105;
+            @include fonts(Arial, serif, 12px ,normal );
+            color: $colorGreen;
         }
     }
 }
@@ -219,7 +223,7 @@ p {
     display: flex;
     justify-content: space-around;
     &_link:hover path {
-        fill: #7EB105;
+        fill: $colorGreen;
     }
 }
 // hiden part !!!
@@ -236,18 +240,14 @@ p {
         margin-left: 8px;
         margin-top: 8px;
         &_1 {
-        font-family: Arial, serif;
+        @include fonts(Arial, serif, 12px ,normal );
         font-style: normal;
         font-weight: bold;
-        font-size: 12px;
-        line-height: normal;
-        color: #212121;
+        color: $colorDark;
         }
         &_2 {
-        font-family: Arial, serif;
-        font-size: 11px;
-        line-height: normal;
-        color: #F6731C;
+            @include fonts(Arial, serif, 11px ,normal );
+        color: $colorOrange;
         }
     }
 }
@@ -255,19 +255,15 @@ p {
     margin-top: 10px;
     margin-left: 5px;
     &_caption {
-        font-family: Arial, serif;
-        font-size: 14px;
-        line-height: normal;
-        color: #212121 
+        @include fonts(Arial, serif, 14px ,normal );
+        color: $colorDark; 
     }
     &_list {
         margin-top: -10px;
         margin-left: -15px;
         &_item {
-            font-family: Arial;
-            font-size: 14px;
-            line-height: 19px;
-            color: #999999
+            @include fonts(Arial, serif, 14px ,19px );
+            color: $colorLightGrey;
         }
     }
 }

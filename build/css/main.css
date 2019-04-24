@@ -9,7 +9,7 @@
   border-left: 1px solid #EBEBEB;
   border-right: 1px solid #EBEBEB;
   position: relative; }
-  .iphone_main:hover .iphone_info_hiden {
+  .iphone_main:hover {
     border: 1px solid #7EB105;
     -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
             box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
@@ -22,12 +22,20 @@
     -webkit-transition: .5s;
     -o-transition: .5s;
     transition: .5s; }
+  .iphone_main:hover .iphone_info_hiden {
+    opacity: 1;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
 
 .iphone_info {
   margin: 0 auto;
   max-width: 217px; }
   .iphone_info_hiden {
-    opacity: 0; }
+    opacity: 0;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
 
 .icons {
   padding: 10px 17px 4px 0px;
@@ -56,7 +64,7 @@
   margin-left: auto;
   margin-right: auto; }
 
-.sq_main {
+.colorchange_main {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -64,28 +72,29 @@
   position: absolute;
   bottom: 10px;
   left: 0px; }
-  .sq_main_1, .sq_main_2 {
+  .colorchange_main_1, .colorchange_main_2 {
     width: 18px;
     height: 18px;
     display: block;
     position: absolute;
     bottom: -20px;
     -webkit-border-radius: 4px;
-            border-radius: 4px; }
-    .sq_main_1:hover, .sq_main_2:hover {
+            border-radius: 4px;
+    border: 2px solid transparent; }
+    .colorchange_main_1:hover, .colorchange_main_2:hover {
       border: 2px solid #7EB105;
       -webkit-border-radius: 4px;
               border-radius: 4px;
       cursor: pointer;
-      -webkit-transition: .5s;
-      -o-transition: .5s;
-      transition: .5s; }
-  .sq_main_1 {
+      -webkit-transition: .2s;
+      -o-transition: .2s;
+      transition: .2s; }
+  .colorchange_main_1 {
     background-color: #454545;
     left: 2px; }
-  .sq_main_2 {
+  .colorchange_main_2 {
     background-color: #FFACA7;
-    left: 32px; }
+    left: 42px; }
 
 a {
   text-decoration: none; }
@@ -102,9 +111,9 @@ a {
   .ratings_stars_item:hover path {
     fill: #F6731C; }
   .ratings_stars_mark {
-    font-family: serif, Arial;
-    font-size: 12px;
+    font-family: Arial;
     line-height: normal;
+    font-size: 12px;
     color: #999999; }
   .ratings_reviews_count_item {
     font-family: Arial, serif;
@@ -130,24 +139,24 @@ p {
       -ms-flex-direction: column;
           flex-direction: column; }
   .about_key_item {
-    font-family: Arial, serif;
-    font-size: 10px;
+    font-family: Arial;
     line-height: normal;
+    font-size: 10px;
     color: #999999;
     display: inline-block; }
   .about_key_item2 {
-    font-family: Arial, serif;
-    font-size: 11px;
+    font-family: Arial;
     line-height: normal;
+    font-size: 11px;
     color: #212121;
     display: inline-block; }
   .about_inStock {
     margin-top: 5px;
     position: relative; }
-  .about_inStock_words {
-    font-family: Arial, serif;
-    font-size: 12px;
+  .about_inStock_text {
+    font-family: Arial;
     line-height: normal;
+    font-size: 12px;
     color: #7EB105;
     margin-left: 15px; }
   .about_inStock_circle {
@@ -164,34 +173,37 @@ p {
     margin-top: 6px;
     width: 217px; }
     .about_info_item {
-      font-family: Arial, serif;
-      font-size: 14px;
-      line-height: normal;
-      color: #212121; }
-  .about_gb {
-    margin-top: 6px; }
-    .about_gb_link1, .about_gb_link2 {
       font-family: Arial;
+      line-height: normal;
       font-size: 14px;
-      line-height: normal; }
-    .about_gb_link1 {
       color: #212121; }
-    .about_gb_link2 {
+  .about_memory {
+    margin-top: 6px; }
+    .about_memory_link1, .about_memory_link2 {
+      font-family: Arial;
+      line-height: normal;
+      font-size: 14px; }
+    .about_memory_link1 {
+      color: #212121; }
+      .about_memory_link1:hover {
+        border-bottom-style: solid;
+        color: #7EB105; }
+    .about_memory_link2 {
       color: #7EB105;
       border-bottom-style: dashed; }
   .about_price {
     margin-top: 12px; }
     .about_price_old {
-      font-family: Arial, serif;
-      font-size: 12px;
+      font-family: Arial;
       line-height: normal;
+      font-size: 12px;
       color: #999999;
       text-decoration: line-through;
       display: inline-block; }
     .about_price_new {
-      font-family: Arial, serif;
-      font-size: 18px;
+      font-family: Arial;
       line-height: normal;
+      font-size: 18px;
       color: #F6731C;
       font-weight: bold;
       margin-left: 8px;
@@ -208,9 +220,9 @@ p {
         font-size: 12px; }
     .about_price_economy {
       margin-top: 3px;
-      font-family: Arial, serif;
-      font-size: 12px;
+      font-family: Arial;
       line-height: normal;
+      font-size: 12px;
       color: #7EB105; }
 
 .line {
@@ -245,31 +257,31 @@ p {
     margin-left: 8px;
     margin-top: 8px; }
     .sale_text_1 {
-      font-family: Arial, serif;
+      font-family: Arial;
+      line-height: normal;
+      font-size: 12px;
       font-style: normal;
       font-weight: bold;
-      font-size: 12px;
-      line-height: normal;
       color: #212121; }
     .sale_text_2 {
-      font-family: Arial, serif;
-      font-size: 11px;
+      font-family: Arial;
       line-height: normal;
+      font-size: 11px;
       color: #F6731C; }
 
 .characters {
   margin-top: 10px;
   margin-left: 5px; }
   .characters_caption {
-    font-family: Arial, serif;
-    font-size: 14px;
+    font-family: Arial;
     line-height: normal;
+    font-size: 14px;
     color: #212121; }
   .characters_list {
     margin-top: -10px;
     margin-left: -15px; }
     .characters_list_item {
       font-family: Arial;
-      font-size: 14px;
       line-height: 19px;
-      color: #999999; };
+      font-size: 14px;
+      color: #999999; }
