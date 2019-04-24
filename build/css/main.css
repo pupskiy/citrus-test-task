@@ -6,8 +6,6 @@
 .iphone_main {
   max-width: 249px;
   margin: 100px auto;
-  border-left: 1px solid #EBEBEB;
-  border-right: 1px solid #EBEBEB;
   position: relative; }
   .iphone_main:hover {
     border: 1px solid #7EB105;
@@ -30,7 +28,12 @@
 
 .iphone_info {
   margin: 0 auto;
-  max-width: 217px; }
+  max-width: 217px;
+  border-left: 1px solid #EBEBEB;
+  border-right: 1px solid #EBEBEB; }
+  .iphone_info_unhiden {
+    margin: 0 auto;
+    padding: 0 20px; }
   .iphone_info_hiden {
     opacity: 0;
     -webkit-transition: .5s;
@@ -243,8 +246,9 @@ p {
     fill: #7EB105; }
 
 .iphone_info_hiden {
-  margin: 20px auto;
-  width: 249px; }
+  margin: 0 auto;
+  width: 249px;
+  padding: 20px; }
 
 .sale {
   margin-left: 5px;

@@ -17,8 +17,6 @@ $colorLightGrey: #999999;
 .iphone_main {
     max-width: 249px;
     margin: 100px auto;
-    border-left: 1px solid #EBEBEB;
-    border-right: 1px solid #EBEBEB;
     position: relative;
     &:hover {
         border: 1px solid $colorGreen;
@@ -37,6 +35,12 @@ $colorLightGrey: #999999;
 .iphone_info {
     margin: 0 auto;
     max-width: 217px;
+    border-left: 1px solid #EBEBEB;
+    border-right: 1px solid #EBEBEB;
+    &_unhiden {
+        margin: 0 auto;
+        padding: 0 20px; 
+    }
     &_hiden {
         opacity: 0;
         transition: .5s;
@@ -229,8 +233,9 @@ p {
 // hiden part !!!
 
 .iphone_info_hiden {
-    margin: 20px auto;
+    margin: 0 auto;
     width: 249px;
+    padding: 20px;
 }
 .sale {
     margin-left: 5px;
