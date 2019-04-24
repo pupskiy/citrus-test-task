@@ -1,0 +1,278 @@
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+.iphone_main {
+    max-width: 249px;
+    margin: 100px auto;
+    border-left: 1px solid #EBEBEB;
+    border-right: 1px solid #EBEBEB;
+    position: relative;
+    &:hover .iphone_info_hiden{
+        border: 1px solid #7EB105;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 3px;
+        transform: translateY(-1px);
+        opacity: 1;
+        transition: .5s;
+    }
+}
+// visible part !!!
+.iphone_info {
+    margin: 0 auto;
+    max-width: 217px;
+    &_hiden {
+        opacity: 0;
+    }
+}
+
+.icons {
+    padding: 10px 17px 4px 0px; 
+    display: flex; 
+    &_youtube {
+        margin-right: 19px;
+        &:hover path {
+            fill: #4169E1;
+            transition: .5s;
+        }
+    }
+    &_around:hover path {
+        fill: #4169E1;
+        transition: .5s;
+    }
+}
+.iphone_wrapper {
+    position: relative;
+}
+.iphone_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sq_main {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    &_1, &_2 {
+        width: 18px;
+        height: 18px;
+        display: block;
+        position: absolute;
+        bottom: -20px;
+        border-radius: 4px;
+        &:hover {
+            border: 2px solid #7EB105;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: .5s;
+        }
+    }
+    &_1 {
+        background-color: #454545;
+        left: 2px;
+    }
+    &_2 {
+        background-color: #FFACA7;
+        left: 32px;
+    }
+}
+a {
+    text-decoration: none;
+}
+.ratings {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    &_stars_item:hover path {
+        fill: #F6731C;
+    }
+    &_stars_mark {
+        font-family: serif, Arial;
+        font-size: 12px;
+        line-height: normal;
+        color: #999999;
+    }
+    &_reviews_count_item {
+        font-family: Arial, serif;
+        font-size: 12px;
+        line-height: normal;
+        text-decoration: underline;
+        color: #7EB105;
+    }
+}
+p {
+    padding: 0;
+    margin: 0;
+}
+.about {
+    margin-top: 5px;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    &_key_item {
+        font-family: Arial, serif;
+        font-size: 10px;
+        line-height: normal;
+        color: #999999;
+        display: inline-block;
+    }
+    &_key_item2 {
+        font-family: Arial, serif;
+        font-size: 11px;
+        line-height: normal;
+        color: #212121;
+        display: inline-block;
+    }
+    &_inStock {
+        margin-top: 5px;
+        position: relative;
+    }
+    &_inStock_words {
+        font-family: Arial, serif;
+        font-size: 12px;
+        line-height: normal;
+        color: #7EB105;
+        margin-left: 15px;
+    }
+    &_inStock_circle {
+        display: block;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        top: 3px;
+        left: 0;
+        border-radius: 50%;
+        background-color: #7EB105;
+    }
+    &_info {
+        margin-top: 6px;
+        width: 217px;
+        &_item {
+            font-family: Arial, serif;
+            font-size: 14px;
+            line-height: normal;
+            color: #212121;
+        }
+    }
+    &_gb {
+        margin-top: 6px;
+        &_link1, &_link2 {
+            font-family: Arial;
+            font-size: 14px;
+            line-height: normal;
+        }
+        &_link1 {
+            color: #212121;
+        }
+        &_link2 {
+            color: #7EB105;
+            border-bottom-style: dashed;
+        }
+    }
+    &_price {
+        margin-top: 12px;
+        &_old {
+            font-family: Arial, serif;
+            font-size: 12px;
+            line-height: normal;
+            color: #999999;
+            text-decoration: line-through;
+            display: inline-block;
+        }
+        &_new {
+            font-family: Arial, serif;
+            font-size: 18px;
+            line-height: normal;
+            color: #F6731C;
+            font-weight: bold;
+            margin-left: 8px;
+            display: inline-block;
+            position: relative;
+            &::after {
+                content: "грн";
+                position: absolute;
+                display: block;
+                top: -1px;
+                right: -22px;
+                font-weight: bold;
+                color: #F6731C;
+                font-size: 12px;
+            }
+        }
+        &_economy {
+            margin-top: 3px;
+            font-family: Arial, serif;
+            font-size: 12px;
+            line-height: normal;
+            color: #7EB105;
+        }
+    }
+}
+.line {
+    color: #EBEBEB;
+    width: 90%;
+    opacity: .3;
+}
+.icons_bottom {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    &_link:hover path {
+        fill: #7EB105;
+    }
+}
+// hiden part !!!
+
+.iphone_info_hiden {
+    margin: 20px auto;
+    width: 249px;
+}
+.sale {
+    margin-left: 5px;
+    display: flex;
+    &_text {
+        display: block;
+        margin-left: 8px;
+        margin-top: 8px;
+        &_1 {
+        font-family: Arial, serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: normal;
+        color: #212121;
+        }
+        &_2 {
+        font-family: Arial, serif;
+        font-size: 11px;
+        line-height: normal;
+        color: #F6731C;
+        }
+    }
+}
+.characters {
+    margin-top: 10px;
+    margin-left: 5px;
+    &_caption {
+        font-family: Arial, serif;
+        font-size: 14px;
+        line-height: normal;
+        color: #212121 
+    }
+    &_list {
+        margin-top: -10px;
+        margin-left: -15px;
+        &_item {
+            font-family: Arial;
+            font-size: 14px;
+            line-height: 19px;
+            color: #999999
+        }
+    }
+}
+
+
+
+
+

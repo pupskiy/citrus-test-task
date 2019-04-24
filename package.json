@@ -1,0 +1,26 @@
+{
+  "name": "testings",
+  "version": "1.0.0",
+  "description": "citrus",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "test",
+    "gulp": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "-"
+  },
+  "keywords": [
+    "-"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "browser-sync": "^2.26.4",
+    "gulp": "^4.0.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2"
+  }
+}
